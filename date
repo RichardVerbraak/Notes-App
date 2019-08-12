@@ -1,0 +1,32 @@
+// Unix Epoch - January 1st 1970 00:00:00
+// Positive numbers to change AFTER the Epoch
+// Negative numbers to change BEFORE the Epoch
+// 1000 (milliseconds) to add 1 second to the Epoch
+// -60000 (milliseconds) to subtract one minute from the Epoch 
+
+const now = new Date()
+const timeStamp = now.getTime()
+
+const myDate = new Date(timeStamp)
+console.log(myDate.getFullYear())
+
+// Console.log already converts the date object to string but to be safe use toString anyway
+
+const date1 = new Date("June 3 1994 10:10:10")
+const date2 = new Date("December 31 2000 10:10:10")
+
+const timeStamp1 = date1.getTime()
+const timeStamp2 = date2.getTime()
+
+function whoComesFirst (d1, d2) {
+    if (d1 < d2) {
+        console.log(d1.toString())
+    } else if (d2 < d1) {
+        console.log(d2.toString())
+    }
+}
+
+whoComesFirst(date1, date2)
+
+
+
